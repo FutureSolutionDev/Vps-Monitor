@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Server Monitor</title>
+  <script defer src="/dashboard.js"></script>	
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-900 text-white p-4 font-sans" >
+  <div class="mb-4">
+    <div class="flex space-x-4 mb-4">
+      <button onclick="showTab('stats')" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded">Stats</button>
+      <button onclick="showTab('processes')" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded">Processes</button>
+      <button onclick="showTab('pm2')" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded">PM2</button>
+    </div>
+    <div id="stats" class="tab-content">
+      <div id="cpu" class="mb-4"></div>
+      <div id="memory" class="mb-4"></div>
+      <div id="disk" class="mb-4"></div>
+    </div>
+    <div id="processes" class="tab-content hidden"></div>
+    <div id="pm2" class="tab-content hidden"></div>
+  </div>
+</body>
+</html>
+
